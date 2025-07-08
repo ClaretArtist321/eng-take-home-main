@@ -62,7 +62,7 @@ export interface SearchResponse {
 export const searchMovies = async (query: string, page: number = 1): Promise<SearchResponse> => {
     try {
         const response = await safeFetch(
-            `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}${page}&language=${config.DEFAULT_LANGUAGE}`,
+            `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}&page=${page}&language=${config.DEFAULT_LANGUAGE}`,
         );
 
         if (!response.ok) {

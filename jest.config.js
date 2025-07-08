@@ -31,6 +31,9 @@ module.exports = {
         '\\.(css|scss|sass)$': 'identity-obj-proxy',
         '^.+\\.(css|scss|sass)$': 'identity-obj-proxy',
     },
+    globals: {
+        __DEV__: true,
+    },
     clearMocks: true,
     resetMocks: true,
     restoreMocks: true,
